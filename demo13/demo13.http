@@ -1,0 +1,75 @@
+@demo13_HostAddress = http://localhost:5134
+
+### Instructor: crear
+POST {{demo13_HostAddress}}/api/instructores
+Content-Type: application/json
+
+{
+  "nombres": "Ana",
+  "apellidos": "García",
+  "especialidad": "Matemáticas",
+  "email": "ana.garcia@example.com",
+  "activo": true
+}
+
+### Instructor: listar
+GET {{demo13_HostAddress}}/api/instructores
+Accept: application/json
+
+### Instructor: consultar por ID
+GET {{demo13_HostAddress}}/api/instructores/1
+Accept: application/json
+
+### Instructor: actualizar
+PUT {{demo13_HostAddress}}/api/instructores/1
+Content-Type: application/json
+
+{
+  "idInstructor": 1,
+  "nombres": "Ana María",
+  "apellidos": "García",
+  "especialidad": "Matemáticas",
+  "email": "ana.garcia@example.com",
+  "activo": true
+}
+
+### Instructor: eliminar
+DELETE {{demo13_HostAddress}}/api/instructores/1
+
+### Estudiante: crear
+POST {{demo13_HostAddress}}/api/estudiantes
+Content-Type: application/json
+
+{
+  "nombres": "Luis",
+  "apellidos": "Pérez",
+  "email": "luis.perez@example.com",
+  "telefono": "5551234567",
+  "activo": true
+}
+
+### Estudiante: listar
+GET {{demo13_HostAddress}}/api/estudiantes
+Accept: application/json
+
+### Estudiante: consultar por ID
+GET {{demo13_HostAddress}}/api/estudiantes/1
+Accept: application/json
+
+### Estudiante: actualizar
+PUT {{demo13_HostAddress}}/api/estudiantes/1
+Content-Type: application/json
+
+{
+  "idEstudiante": 1,
+  "nombres": "Luis Alberto",
+  "apellidos": "Pérez",
+  "email": "luis.perez@example.com",
+  "telefono": "5551234567",
+  "activo": true
+}
+
+### Estudiante: eliminar
+DELETE {{demo13_HostAddress}}/api/estudiantes/1
+
+###
